@@ -12,14 +12,15 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class LoginViewServlet
  */
-@WebServlet("/loginView.me")
+@WebServlet("/loginView.me") // annotation 매핑 방법 : 이 한줄로 매핑이 끝난다.
 public class LoginViewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
     public LoginViewServlet() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -29,9 +30,6 @@ public class LoginViewServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/views/employee/login.jsp");
 		view.forward(request, response);
-		
-	
-	
 	}
 
 	/**

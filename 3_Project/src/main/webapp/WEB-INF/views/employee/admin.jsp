@@ -84,7 +84,7 @@
 				</c:if>
 				
 				<c:if test="${ !empty empList }">
-					<c:foreach items="${empList }" var="e">
+					<c:forEach items="${ empList }" var="e">
 						<tr>
 							<td>${ e.empNo }</td>
 							<td>${ e.empName }</td>
@@ -103,7 +103,7 @@
 								<div class="${e.status == 'N' ? 'selectState' : 'unselectState' }">N</div>
 							</td>
 						</tr>
-					</c:foreach>
+					</c:forEach>
 				</c:if>
 			</table>
 		</div>

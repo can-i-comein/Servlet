@@ -47,20 +47,17 @@
 		}
 		
 		// 버튼없이 엔터키만 쳐도 로그인이 되게 만드는 코드
+		// 함수로 실행이 아니기 때문에 window.onload 사용
 		window.onload = () => {
 			const inputIdPw = document.getElementsByTagName('input');
 			for(let i = 0; i < inputIdPw.length; i++){
-				inputIdPw[i].addEventListener('keyup', e => {
+				inputIdPw[i].addEventListener('keyup', e => { // addEventListender 표준 이벤트 모델
 					if(e.key == 'Enter'){
 						doLoginLabel();
 					}
 				});
 			}
 		}
-		
-		
-		
-		
 	</script>
 </body>
 </html>
